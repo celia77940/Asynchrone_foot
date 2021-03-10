@@ -23,7 +23,29 @@ form.addEventListener("submit", function(e){
     .then(data => {
         console.log(data);
 
-        joueurs.innerHTML = ` Il a ${data[0].age} ans et il s'apelle ${data[0].nom_prenom} `
+        // boucle
+        joueurs.innerHTML = `
+        <div class="display">
+        <div>
+        <p>${data.img_joueurs}</p>
+        <div class="cards">
+        <div>
+        <h2> ${data[0].nom_prenom} </h2>
+        </div>
+        <div>
+        <h3> ${data[0].age} </h3>
+        </div>
+        <div>
+        <h3> ${data[0].club} </h3>
+        </div>
+        <div>
+        <p> ${data[0].description} </p>
+        </div>
+        
+        
+        
+        `
+
     });
 
 });
