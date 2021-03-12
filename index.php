@@ -10,11 +10,10 @@
 <body>
 <div class="fond">
     <h1 class="color align_center">Découvrez les joueurs de l'équipe de France</h1>
-    <form class="display" enctype="multipart/form-data">
+    <form class="display">
         <div class="align_center">
-            <input list="equipe" id="ice-cream-choice" name="ice-cream-choice" />
-            <datalist id="equipe">
-                <option value="Chocolate">
+            <input list="equipefff" id="text" name="text" autocomplete="off"/>
+            <datalist id="equipefff">
             </datalist>
         </div>
         <button>
@@ -49,4 +48,5 @@
     
 </body>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/recherche.js"></script>
 </html>

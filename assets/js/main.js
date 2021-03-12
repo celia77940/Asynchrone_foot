@@ -12,7 +12,7 @@ form.addEventListener("submit", function(e){
     fetch("main.php",
     {
         method: "POST",
-        body : formData
+        body: formData
     })
 
     // Promise : Utiliser pour réaliser des traitement de façon asynchrone
@@ -20,32 +20,36 @@ form.addEventListener("submit", function(e){
 
     .then(response => response.json())
 
-    .then(data => {
-        console.log(data);
-
+    .then(datas => {
+        console.log(datas);
         // boucle
-        joueurs.innerHTML = `
+
+        joueurs.innerHTML = "";
+
+        datas.forEach(data => {
+
+        joueurs.innerHTML += `
         <div class="display">
-        <div>
-        <p>${data.img_joueurs}</p>
-        <div class="cards">
-        <div>
-        <h2> ${data[0].nom_prenom} </h2>
-        </div>
-        <div>
-        <h3> ${data[0].age} </h3>
-        </div>
-        <div>
-        <h3> ${data[0].club} </h3>
-        </div>
-        <div>
-        <p> ${data[0].description} </p>
-        </div>
+            <div>
+                <img src="${data.img_joueurs}" height="400em" alt="">
+            </div>
+            <div class="cards">
+                <div>
+                    <h2> ${data.nom_prenom} </h2>
+                </div>
+                <div>
+                    <h3> ${data.age} </h3>
+                </div>
+                <div>
+                    <h3> ${data.club} </h3>
+                </div>
+                <div>
+                    <p> ${data.description} </p>
+                </div>
+            </div>
+        </div>  
+        `   
+        });
         
-        
-        
-        `
-
     });
-
 });
