@@ -1,69 +1,315 @@
-
-
 body{
-    background-image: url("../img/fond.jpg");
+    margin: 0em;
+}
+
+/* --------------------- HEADER -------------------- */
+
+/* img de fond */
+.header{
+    background-image: url("../img/fff.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+    height: 30em;
 }
 
-/* .fond{
-    background-color: rgba(255, 255, 255, 0.609);
-    padding-top: 2em;
-} */
+/* bordure en bas pour réaliser les traits */
+.border{
+    border-top: 0.2em solid white;
+    width: 20em;
+    margin-top: 2em;
+    margin-left: 4em;
+    margin-right: 4em
+}
 
+/* svg etoile */
+.etoile{
+    color: rgb(131, 131, 18);
+    margin-left: 1em;
+}
+
+/* display des bordure et des etoiles */
+.display_header{
+    display: flex;
+    justify-content: center;
+    padding-top: 4em;
+}
+
+/* Titre principal */
 h1{
-    margin: 0em;
-
-}
-
-.color{
-    color:rgb(25, 25, 121);
-}
-
-.color1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 3.2em;
+    text-transform: uppercase;
+    margin-top: 1em;
+    text-align: center;
     color: white;
 }
 
-.align_center{
+/* Sous_titre */
+h2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.8em;
+    margin-top: 1em;
+    margin-bottom: 1em;
     text-align: center;
+    color: white;
 }
 
+/* Couleur blanc pour les svg */
+.color{
+    color: white;
+}
+
+/* barre de recherche */
 input{
-    border: 0.2em solid rgb(25, 25, 121);
-    padding: 0.8em;
+    border: 0.1em solid white;
+    padding: 1em;
     width: 40em;
-    border-radius: 2em 0em 0em 2em ;
     background-color: white;
 }
 
-.display{
+/* display de la barre de recherche */
+.display_input{
     display: flex;
     justify-content: center;
-    padding-bottom: 2em;
+    padding-top: 1.5em;
 }
 
+/* boutton de recherche */
 button{
-    border: rgb(25, 25, 121);
+    border: 0.1em solid white;
     background-color: rgb(25, 25, 121);
     padding: 0.3em;
     width: 4em;
-    border-radius: 0em 2em 2em 0em ;
 }
 
-h2{
-    margin-top: 0em;
-    margin-right: 1em;
-    font-size: 3em;
-    color: rgb(25, 25, 121);
+@media(max-width: 578px){
+
+    .border{
+        width: 4em;
+        margin-left: 1em;
+        margin-right: 1em;
+        border-top: 0.1em solid white;
+        margin-top: 1em;
+    }
+
+    .header{
+        height: 20em;
+    }
+
+    /* barre de recherche */
+    input{
+        width: 15em;
+    }
+
+    /* Titre principal */
+    h1{
+        font-size: 1.5em;
+    }
+
+    /* Sous_titre */
+    h2{
+        font-size: 0.6em;
+    }
+
+    .etoile{
+        height: 2em;
+        margin-left: 0em;
+    }
 }
 
+/* -------------------- CARDS ----------------------- */
+
+/* toute la cards */
+.total_card{
+    margin-bottom: 2em;
+}
+
+/* display de la cards */
+.display_card{
+    display: flex;
+    background-color: rgb(3, 3, 83);
+    width: 80em;
+    height: 25em;
+    margin: 0 auto;
+    box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 0.3)
+}
+
+/* border de la cards */
 .cards{
-    padding-left: 3em;
-    width: 40em;
+    width: 80em;
+    margin-top: 0.5em;
+    border-top: 0.1em solid white;
+    margin-right: 0.5em;
+    border-right: 0.1em solid white;
+    margin-bottom: 0.5em;
+    border-bottom: 0.1em solid white;
 }
 
-img{
-    border-radius: 2em 0em 0em 2em;
+/* etoile */
+.card_etoile{
+    display: flex;
+    justify-content: center;
+    padding-top: 1em;
 }
+
+/* trait qui sont entre les etoiles */
+.border_card{
+    border-top: 0.1em solid white;
+    width: 8em;
+    margin-top: 0.8em;
+    margin-left: 1em;
+    margin-right: 1em
+}
+
+/* Nom et prenom du joueurs */
+h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 2em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    text-align: center;
+    color: white;
+}
+
+/* Display de l'age et club */
+.display_ac{
+    display: flex;
+    justify-content: center;
+}
+
+/* display age  */
+.display_age{
+    display: flex;
+    justify-content: center;
+}
+
+/* display club */
+.display_club{
+    display: flex;
+    justify-content: center;
+}
+
+/* description du joueurs */
+p{
+    margin: 0em;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+}
+
+/* SVG de club/age  */
+.picto{
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+/* div paragraphe */
+.para p{
+    margin: 1em;
+    font-size: 0.9em;
+    text-align: justify;
+}
+
+/* border du lien */
+.border_lien{
+    border-top: 0.1em solid white;
+    width: 8em;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+/* div lien */
+.lien{
+    text-align: center;
+    margin-top: 1em;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+/* wikipedia  */
+.wiki{
+    text-align: center;
+    margin-top: 1em;
+}
+
+/* lien blanc */
+a{
+    color: white;
+}
+
+/* id joueurs */
+#joueurs{
+    margin-top: 3em;
+}
+
+@media(max-width: 578px){
+
+    /* display de la cards */
+    .display_card{
+        display: block;
+        width: 18em;
+        height: 31.5em;
+        margin: 0 auto;
+        margin-bottom: 1em;
+    }
+
+    img{
+        height: 12em;
+    }
+
+    /* border de la cards */
+    .cards{
+        border-top: 0em;
+        border-left: 0.1em solid white;
+        width: 17em;
+        margin-top: 0.1em;
+        margin-right: 0.1em;
+        margin-bottom: 0.2em;
+        margin-left: 0.5em;
+    }
+
+    /* etoile */
+    .card_etoile{
+        display: flex;
+        justify-content: center;
+        padding-top: 1em;
+    }
+
+    /* Nom et prenom du joueurs */
+    h3{
+        font-size: 1.5em;
+    }
+
+    /* description du joueurs */
+    p{
+        font-size: 0.8em;
+    }
+
+    /* div paragraphe */
+    .para p{
+        margin: 1em;
+        font-size: 0.8em;
+        text-align: justify;
+    }
+
+    /* div lien */
+    .lien{
+        text-align: center;
+        margin-top: 0.5em;
+        font-size: 1.2em;
+        font-weight: 500;
+    }
+
+    /* wikipedia  */
+    .wiki{
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+}
+   
